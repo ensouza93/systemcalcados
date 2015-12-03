@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2015-11-11T23:15:59 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="condP" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="70dd11c7-2886-4548-ba18-7ec6ff3a5e88">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexao.xml"/>
+	<queryString>
+		<![CDATA[select * from condicao_pagamento]]>
+	</queryString>
+	<field name="idcondicao_pagamento" class="java.lang.Integer"/>
+	<field name="condicaopagamento" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="534" height="79" uuid="572fda0c-4de4-44cf-8d32-19fd8d373adf"/>
+				<textElement textAlignment="Center">
+					<font size="29" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Condições Pagamento]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="120" height="30" uuid="eb59aa38-4478-447a-9198-1b607faab884"/>
+				<text><![CDATA[idcondicao_pagamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="10" width="100" height="30" uuid="e594c08d-754e-4ab5-8e6b-db0064dc6868"/>
+				<text><![CDATA[condicaopagamento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="137" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="79" width="100" height="30" uuid="b471b75d-6e49-4d4a-83f5-bccc4dcabf7a"/>
+				<textFieldExpression><![CDATA[$F{idcondicao_pagamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="80" width="100" height="30" uuid="c79efb8f-33ac-405d-b7ec-132142380d5c"/>
+				<textFieldExpression><![CDATA[$F{condicaopagamento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

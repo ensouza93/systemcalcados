@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2015-11-11T23:30:43 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contasPagar" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="74fe9d14-b17e-4341-9921-530d409df789">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexao.xml"/>
+	<queryString>
+		<![CDATA[select * from contas_pagar]]>
+	</queryString>
+	<field name="idcontas_pagar" class="java.lang.Integer"/>
+	<field name="titulo" class="java.lang.String"/>
+	<field name="valor" class="java.lang.Double"/>
+	<field name="vencimento" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="575" height="40" uuid="6ead3af5-8f1b-4a40-9c4a-d387d4cc91fe"/>
+				<textElement textAlignment="Center" rotation="None">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Contas a Pagar]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="100" height="30" uuid="591f98a9-0cf1-42dd-a9e9-ab7afdcf8242"/>
+				<text><![CDATA[idcontas_pagar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="8f744766-ae36-47eb-a507-195bc6099d19"/>
+				<text><![CDATA[titulo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="100" height="30" uuid="abc57977-9862-467f-adee-db380f866380"/>
+				<text><![CDATA[valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="100" height="30" uuid="55805106-3439-4b0b-a311-df191d224506"/>
+				<text><![CDATA[vencimento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="73" width="100" height="30" uuid="555c81c9-9f17-4a83-a7cf-63c21cbd0c22"/>
+				<textFieldExpression><![CDATA[$F{idcontas_pagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="73" width="100" height="30" uuid="efd61e63-6030-49fc-bfb2-6c0490dfd983"/>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="73" width="100" height="30" uuid="07bfb066-53e5-451d-a415-765abfacbe6a"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="73" width="100" height="30" uuid="42429668-db39-4494-809c-3ff00d729fc4"/>
+				<textFieldExpression><![CDATA[$F{vencimento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

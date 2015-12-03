@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2015-11-11T23:52:53 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="novaVenda" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7ee4f3b-b594-4b0e-acbb-e14b50a895d5">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexao.xml"/>
+	<queryString>
+		<![CDATA[select * from nova_venda]]>
+	</queryString>
+	<field name="idnova_venda" class="java.lang.Integer"/>
+	<field name="cliente_idcliente" class="java.lang.Integer"/>
+	<field name="forma_pagamento_idforma_pagamento" class="java.lang.Integer"/>
+	<field name="condicao_pagamento_idcondicao_pagamento" class="java.lang.Integer"/>
+	<field name="produto_idproduto" class="java.lang.Integer"/>
+	<field name="precototal" class="java.lang.Double"/>
+	<field name="quantidade" class="java.lang.Integer"/>
+	<field name="valorproduto" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="22" width="534" height="30" uuid="37c46435-cf93-433b-80e8-c272c0332003"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Venda]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="6c3c0ed1-6663-4075-9e67-7fcf329886ac"/>
+				<text><![CDATA[idnova_venda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="100" height="30" uuid="c2a7cd5f-8e9d-4984-843b-5915ddbded75"/>
+				<text><![CDATA[cliente_idcliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="0" width="100" height="30" uuid="0862e899-a0ef-4a00-ab3e-435cae71c186"/>
+				<text><![CDATA[produto_idproduto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" uuid="26324144-192c-40be-8b2e-e8d8596d2467"/>
+				<text><![CDATA[precototal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="82" width="100" height="30" uuid="bae34f24-0864-4363-895f-d7e58305357b"/>
+				<textFieldExpression><![CDATA[$F{idnova_venda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="82" width="100" height="30" uuid="13d740c6-fead-42d4-84fe-fa680b836a18"/>
+				<textFieldExpression><![CDATA[$F{cliente_idcliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="82" width="100" height="30" uuid="8e5b0d12-3664-4ce8-96b9-ade67ee87c03"/>
+				<textFieldExpression><![CDATA[$F{produto_idproduto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="82" width="100" height="30" uuid="c78e492e-669a-4c74-ab74-7ac913ca20ef"/>
+				<textFieldExpression><![CDATA[$F{precototal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
