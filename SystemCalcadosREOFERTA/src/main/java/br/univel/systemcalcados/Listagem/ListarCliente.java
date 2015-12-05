@@ -231,12 +231,12 @@ public class ListarCliente extends javax.swing.JFrame {
     private javax.swing.JTextField txfBuscarClientes;
     // End of variables declaration//GEN-END:variables
 
-    public Cliente getCliente() {
-
-        ClienteDAO cl = new ClienteDAO();
-        return cl.editarTabela(Integer.parseInt(tbClientes.getValueAt(tbClientes.getSelectedRow(), 0).toString()));
-
-    }
+//    public Cliente getCliente() {
+//
+//        ClienteDAO cl = new ClienteDAO();
+//        return cl.editarTabela(Integer.parseInt(tbClientes.getValueAt(tbClientes.getSelectedRow(), 0).toString()));
+//
+//    }
 
     private void carregaDados(Cliente cliente) {
         this.cliente = cliente;
@@ -257,7 +257,7 @@ public class ListarCliente extends javax.swing.JFrame {
         }
 
         private List<Cliente> popularTabela() {
-            clientes = clDao.listar();
+        //    clientes = clDao.listar();
             fireTableDataChanged();
             return clientes;
 
@@ -305,7 +305,7 @@ public class ListarCliente extends javax.swing.JFrame {
 
             ClienteDAO clienteDao = new ClienteDAO();
             List<Cliente> cl = new ArrayList<>();
-            cl = clienteDao.listar();
+           // cl = clienteDao.listar();
 
             Pattern padrao = Pattern.compile(".*" + texto + ".*", Pattern.CASE_INSENSITIVE); // criou padrao .* e qualquer coisa antes ou depois
 

@@ -60,48 +60,48 @@ public class CondicoesPagamentoDAO {
         }
     }
 
-    public CondicoesPagamento editarTabela(int id) {
+//    public CondicoesPagamento editarTabela(int id) {
+//
+//        List<CondicoesPagamento> pagamentos = listar();
+//        for (CondicoesPagamento c1 : pagamentos) {
+//            if (c1.getId() == id) {
+//                return c1;
+//            }
+//        }
+//        return null;
+//
+//    }
 
-        List<CondicoesPagamento> pagamentos = listar();
-        for (CondicoesPagamento c1 : pagamentos) {
-            if (c1.getId() == id) {
-                return c1;
-            }
-        }
-        return null;
-
-    }
-
-    public List<CondicoesPagamento> listar() {
-
-        try {
-
-            List<CondicoesPagamento> pagamentos;
-            pagamentos = new ArrayList<>();
-            con = ConexaoDAO.criarConexao();
-            String sql = "select * from condicao_pagamento";
-            ps = con.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                CondicoesPagamento cond = new CondicoesPagamento();
-                cond.setId(rs.getInt(1));
-                cond.setCondicao(rs.getString(2));
-                pagamentos.add(cond);
-            }
-            return pagamentos;
-        } catch (SQLException ex) {
-            Logger.getLogger(CondicoesPagamento.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        } finally {
-            try {
-                ps.close();
-                con.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(CondicoesPagamento.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-
-    }
+//    public List<CondicoesPagamento> listar() {
+//
+//        try {
+//
+//            List<CondicoesPagamento> pagamentos;
+//            pagamentos = new ArrayList<>();
+//            con = ConexaoDAO.criarConexao();
+//            String sql = "select * from condicao_pagamento";
+//            ps = con.prepareStatement(sql);
+//            ResultSet rs = ps.executeQuery();
+//            while (rs.next()) {
+//                CondicoesPagamento cond = new CondicoesPagamento();
+//                cond.setId(rs.getInt(1));
+//                cond.setCondicao(rs.getString(2));
+//                pagamentos.add(cond);
+//            }
+//            return pagamentos;
+//        } catch (SQLException ex) {
+//            Logger.getLogger(CondicoesPagamento.class.getName()).log(Level.SEVERE, null, ex);
+//            return null;
+//        } finally {
+//            try {
+//                ps.close();
+//                con.close();
+//            } catch (SQLException ex) {
+//                Logger.getLogger(CondicoesPagamento.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+//
+//    }
 
     public String altera(CondicoesPagamento condiP, int id) {
 

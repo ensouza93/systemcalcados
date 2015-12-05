@@ -209,70 +209,70 @@ private final String CAMPO_CPF = "cpf";
             return "Falha ao Deletar";
         }
     }
+//
+//    public Cliente editarTabela(int id) {
+//
+//        List<Cliente> clientes = listar();
+//        for (Cliente c1 : clientes) {
+//            if (c1.getId() == id) {
+//                return c1;
+//            }
+//        }
+//        return null;
+//
+//    }
 
-    public Cliente editarTabela(int id) {
-
-        List<Cliente> clientes = listar();
-        for (Cliente c1 : clientes) {
-            if (c1.getId() == id) {
-                return c1;
-            }
-        }
-        return null;
-
-    }
-
-    public List<Cliente> listar() {
-
-        try {
-            List<Cliente> clientes;
-            clientes = new ArrayList <>();
-            con = ConexaoDAO.criarConexao();
-            String sql = "select * from cliente";
-            ps = con.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                Cliente cliente = new Cliente();
-                cliente.setId(rs.getInt(1));
-                cliente.setNome(rs.getString(2));
-                cliente.setSobrenome(rs.getString(3));
-                cliente.setEndereco(rs.getString(4));
-                cliente.setBairro(rs.getString(5));
-                cliente.setCidade(rs.getString(6));
-                cliente.setCpf(rs.getString(7));
-                cliente.setRg(rs.getString(8));
-                cliente.setTelRes(rs.getString(9));
-                cliente.setTelCelular(rs.getString(10));
-                cliente.setEmail(rs.getString(11));
-                cliente.setRefPessoalA_NomeCompleto(rs.getString(12));
-                cliente.setRefTrabalhoA_NomeEmpresa(rs.getString(13));
-                cliente.setRefTrabalhoA_RendaSalarial(rs.getString(14));
-                cliente.setRefTraballhoA_TempoServico(rs.getString(15));
-                cliente.setObservacao(rs.getString(16));
-                cliente.setCep(rs.getString(17));
-                cliente.setRefPessoalB_NomeCompleto(rs.getString(18));
-                cliente.setRefPessoalA_Telefone(rs.getString(19));
-                cliente.setRefPessoalA_Celular(rs.getString(20));
-                cliente.setRefPessoalB_Telefone(rs.getString(21));
-                cliente.setRefPessoalB_Celular(rs.getString(22));
-                cliente.setRefTrabalhoA_Telefone(rs.getString(23));
-           
-                clientes.add(cliente);
-            }
-            return clientes;
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        } finally {
-            try {
-                ps.close();
-                con.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-
-    }
+//    public List<Cliente> listar() {
+//
+//        try {
+//            List<Cliente> clientes;
+//            clientes = new ArrayList <>();
+//            con = ConexaoDAO.criarConexao();
+//            String sql = "select * from cliente";
+//            ps = con.prepareStatement(sql);
+//            ResultSet rs = ps.executeQuery();
+//            while (rs.next()) {
+//                Cliente cliente = new Cliente();
+//                cliente.setId(rs.getInt(1));
+//                cliente.setNome(rs.getString(2));
+//                cliente.setSobrenome(rs.getString(3));
+//                cliente.setEndereco(rs.getString(4));
+//                cliente.setBairro(rs.getString(5));
+//                cliente.setCidade(rs.getString(6));
+//                cliente.setCpf(rs.getString(7));
+//                cliente.setRg(rs.getString(8));
+//                cliente.setTelRes(rs.getString(9));
+//                cliente.setTelCelular(rs.getString(10));
+//                cliente.setEmail(rs.getString(11));
+//                cliente.setRefPessoalA_NomeCompleto(rs.getString(12));
+//                cliente.setRefTrabalhoA_NomeEmpresa(rs.getString(13));
+//                cliente.setRefTrabalhoA_RendaSalarial(rs.getString(14));
+//                cliente.setRefTraballhoA_TempoServico(rs.getString(15));
+//                cliente.setObservacao(rs.getString(16));
+//                cliente.setCep(rs.getString(17));
+//                cliente.setRefPessoalB_NomeCompleto(rs.getString(18));
+//                cliente.setRefPessoalA_Telefone(rs.getString(19));
+//                cliente.setRefPessoalA_Celular(rs.getString(20));
+//                cliente.setRefPessoalB_Telefone(rs.getString(21));
+//                cliente.setRefPessoalB_Celular(rs.getString(22));
+//                cliente.setRefTrabalhoA_Telefone(rs.getString(23));
+//           
+//                clientes.add(cliente);
+//            }
+//            return clientes;
+//        } catch (SQLException ex) {
+//            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+//            return null;
+//        } finally {
+//            try {
+//                ps.close();
+//                con.close();
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
+//
+//    }
 
     public String altera(Cliente cli, int id) {
 

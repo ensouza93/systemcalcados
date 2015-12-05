@@ -234,12 +234,12 @@ public class ListarCondicoesPagamento extends javax.swing.JFrame {
     private javax.swing.JTextField txfBuscaCondicao;
     // End of variables declaration//GEN-END:variables
 
-    public CondicoesPagamento getCondicoesPagamento() {
+  //  public CondicoesPagamento getCondicoesPagamento() {
 
         CondicoesPagamentoDAO cl = new CondicoesPagamentoDAO();
-        return cl.editarTabela(Integer.parseInt(tbCondicoesPagamento.getValueAt(tbCondicoesPagamento.getSelectedRow(), 0).toString()));
+    //    return cl.editarTabela(Integer.parseInt(tbCondicoesPagamento.getValueAt(tbCondicoesPagamento.getSelectedRow(), 0).toString()));
 
-    }
+//    }
 
     private void carregaDados(CondicoesPagamento condicoesPagamento) {
         this.condicoesPagamento = condicoesPagamento;
@@ -260,7 +260,7 @@ public class ListarCondicoesPagamento extends javax.swing.JFrame {
         }
 
         private List<CondicoesPagamento> popularTabela() {
-            pagamentos = condicoespagamentosDao.listar();
+        //    pagamentos = condicoespagamentosDao.listar();
             fireTableDataChanged();
             return pagamentos;
 
@@ -304,7 +304,7 @@ public class ListarCondicoesPagamento extends javax.swing.JFrame {
 
             CondicoesPagamentoDAO condicoesPagamentoDAO = new CondicoesPagamentoDAO();
             List<CondicoesPagamento> c = new ArrayList<>();
-            c = condicoespagamentosDao.listar();
+        //    c = condicoespagamentosDao.listar();
 
             Pattern padrao = Pattern.compile(".*" + texto + ".*", Pattern.CASE_INSENSITIVE); // criou padrao .* e qualquer coisa antes ou depois
 
