@@ -20,6 +20,7 @@ public class CadastrarContasReceber extends javax.swing.JFrame {
 
     /**
      * Creates new form CadastrarContasReceber
+     * @wbp.parser.constructor
      */
     public CadastrarContasReceber(java.awt.Frame parent, boolean modal) {
         //   super(parent, modal);

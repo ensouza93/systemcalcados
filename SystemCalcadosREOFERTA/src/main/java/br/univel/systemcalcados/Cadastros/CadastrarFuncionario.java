@@ -15,6 +15,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
 
     /**
      * Creates new form CadastrarFuncionario
+     * @wbp.parser.constructor
      */
     public CadastrarFuncionario(java.awt.Frame parent, boolean modal) {
         //   super(parent, modal);

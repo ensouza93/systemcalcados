@@ -20,6 +20,7 @@ public class CadastrarCondicoesPagamento extends javax.swing.JFrame {
 
     /**
      * Creates new form CadastrarCondicoesPagamento
+     * @wbp.parser.constructor
      */
     public CadastrarCondicoesPagamento(java.awt.Frame parent, boolean modal) {
         //   super(parent, modal);
